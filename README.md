@@ -1,4 +1,4 @@
-# Project Title
+# Tip Calculator
 
 Its a Calculator to calculate how many dollars you have to pay as tip.
 
