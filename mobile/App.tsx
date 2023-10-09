@@ -7,11 +7,11 @@ export default function App() {
   const [bill, setBill] = useState('');
   const [tip, setTip] = useState('');
   const [result, setResult] = useState('');
-
-  const calculate = () =>{
+  
+  const calculate = () => {
     const finalBill = parseFloat(bill);
     const finalTip = parseFloat(tip);
-    const finalResult = (finalBill*(finalTip/100));
+    const finalResult = (finalBill * (finalTip/100));
 
     if(!isNaN(finalBill) && !isNaN(finalTip)){
       setResult(finalResult.toFixed(2));
@@ -27,14 +27,14 @@ export default function App() {
       <Text style={styles.perguntas}>Bill amount:</Text>
       <TextInput
         value={bill}
-        onChangeText={(value)=> setBill(value)}
+        onChangeText={(e) => setBill(e)}
         keyboardType='numeric'
         placeholder='Whats your bill amount?'
       />
       <Text style={styles.perguntas}>Write your tip percentage (%):</Text>
       <TextInput
         value={tip}
-        onChangeText={(value)=> setTip(value)}
+        onChangeText={(e)=> setTip(e)}
         keyboardType='numeric'
         placeholder='Whats your tip percentage?'
       />
@@ -56,16 +56,16 @@ const styles = StyleSheet.create({
   titulo: {
     marginBottom: 10,
   },
-  subtitulo:{
+  subtitulo: {
     margin: 10,
   },
-  perguntas:{
+  perguntas: {
     margin: 10,
   },
   botao: {
     margin: 10,
   },
-  resultado:{
+  resultado: {
     margin: 10,
   }
 });
